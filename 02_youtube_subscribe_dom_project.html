@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter 5: Project-1</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 24px;
+
+        }
+        .sub-btn{
+            border: none;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .is-subscribed{
+            background-color: rgb(233, 233,233);
+            color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <p>Youtube Subscribe Button</p>
+    <button onclick= " Subscribe();"
+    class="js-sub-btn sub-btn"
+    >
+    Subscribe
+    </button> 
+    <!-- js-sub-button -->
+
+    <script>
+
+        function Subscribe() {
+            let butoonElement = document.querySelector(".js-sub-btn");
+
+            if (butoonElement.innerText === "Subscribe") {
+                butoonElement.innerText = "Subscribed";
+                butoonElement.classList.add('is-subscribed')
+            } else {
+                butoonElement.innerText = "Subscribe";
+                butoonElement.classList.remove('is-subscribed')
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
+
+<!-- when we click the button 
+
+1. if the text is "Subscribe" => "Subscribed"
+2. otherwise changes is back.
+3. 
+
+
+
+-->
